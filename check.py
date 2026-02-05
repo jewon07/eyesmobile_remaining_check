@@ -63,7 +63,7 @@ def check_remaining_sayongryang():
         }
         response = requests.post(url, data=payload)
         return response.json()
-    send_telegram_message("사용량 보고")
+    send_telegram_message()
 
 schedule.every().day.at("22:00").do(check_remaining_sayongryang)
 
